@@ -1,0 +1,12 @@
+# Ejemplo 1: Función básica
+fn main() {
+    let mut x: i32 = 2;
+    let mut y: i32 = 3;
+    let mut z: i32 = 5;
+    let mut f: i32 = 4;
+    
+    z = x + y;
+    x = f * z;
+    println!(z);
+    println!(x);
+}

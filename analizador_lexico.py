@@ -467,46 +467,6 @@ class AnalizadorLexicoGUI:
         for result in output:
             print(result)
 
-
-
-
-
-
-
-
-    # def print_analysis_results(self):
-    #     code = self.code_text.get(1.0, tk.END)
-    #     tokens = []
-    #     variables = {}
-    #     output = []
-
-    #     for line_num, line in enumerate(code.split('\n'), 1):
-    #         if line.strip():
-    #             line_tokens = self.tokenize_line(line)
-    #             for token in line_tokens:
-    #                 tipo, descripcion = self.analyze_token(token)
-    #                 tokens.append((line_num, token, tipo, descripcion))
-
-    #                 # Evaluar asignaciones y operaciones aritméticas
-    #                 if tipo == "Identificador" and token not in ["let", "mut"]:
-    #                     if line_tokens[line_tokens.index(token) - 1] == "=":
-    #                         expr = line.split("=")[1].strip().strip(";")
-    #                         variables[token] = eval(expr, {}, variables)
-    #                     elif token == "println!":
-    #                         var_name = line.split("println!(")[1].strip().strip(");")
-    #                         output.append(f"Valor de {var_name}: {variables.get(var_name, 'Variable no definida')}")
-
-    #     # Mostrar resultados en la interfaz
-    #     result_text = "\n".join(output)
-    #     self.code_text.insert(tk.END, f"\n\n// Resultados de println!\n{result_text}")
-
-        # # Mostrar resultados en la interfaz
-        # result_text = "\n".join(output)
-        # messagebox.showinfo("Resultados de println!", result_text)
-
-
-    
-    
     def mostrar_arbol_sintactico(self):
         self.treeview.delete(*self.treeview.get_children())
         self._insertar_nodo_arbol(self.arbol_sintactico, "")
